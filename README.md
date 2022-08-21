@@ -1,6 +1,6 @@
 # SCdenoise: a reference-based scRNA-seq denoising method using semi-supervised learning
 ## Fengqi Zhong, Yuansong Zeng, Yubao Liu, Yuedong Yang*
-Here, we proposed SCdenoise, a semi-supervised denoising method to denoise unlabeled target data based on annotated information in the reference datasets.This repository contains the preprocessed data and Python implementation for SCdenoise.
+Here, we proposed SCdenoise, a semi-supervised denoising method to denoise unlabeled target data based on annotated information in the reference datasets. This repository contains example data and Python implementation for SCdenoise.
 <img width="1277" alt="model" src="https://user-images.githubusercontent.com/43873722/185773344-248c0192-4f13-478e-94f6-30433a565def.png">
 
 # Requirements
