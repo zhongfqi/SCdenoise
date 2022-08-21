@@ -10,7 +10,7 @@ python >=3.7
 umap-learn>=0.5.2
 
 # Pipeline
-See tutorial.ipynb for more details.
+See [tutorial.ipynb](https://github.com/zhongfqi/SCdenoise/blob/master/tutorial.ipynb) for more details.
 
 ## Python script usage
 ```
