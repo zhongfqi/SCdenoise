@@ -1,11 +1,7 @@
 #-*- coding: UTF-8 -*-
 import argparse
-import os
 import random
-import torch
 import torch.backends.cudnn as cudnn
-import numpy as np
-import scanpy as sc
 from utils import *
 from SCdenoise import SCdenoise
 
@@ -49,8 +45,13 @@ if __name__ == "__main__":
     cudnn.benchmark = True
     os.environ["CUDA_VISIBLE_DEVICES"] = args.gpu_id
 
+    # Convert CSV to H5AD
+    csv2h5ad(inPath='./dataset/csv/', outPath=args.dataset_path)
+    # read data and preprocess
     data = sc.read_h5ad(os.path.join(args.dataset_path, args.dataset+'.h5ad'))
     source_data, target_data = split_input(data, args.source_name, args.target_name)
     _, source_data = pre_proccess(source_data)
     _, target_data = pre_proccess(target_data)
+    # SCdenoise
     SCdenoise(args, source_data, target_data)
+
